@@ -1,9 +1,9 @@
 const products = [
     {
-      name: 'HP Essentials 255 G8 AMD',
-      price: 289,
+      name: 'Acer Aspire 3 A315-59 Intel Core i5-1235U/16GB/512GB SSD/15.6"',
+      price: 559,
       seller: 'PcComponentes',
-      image: 'https://thumb.pccomponentes.com/w-300-300/articles/1005/10057282/1639-hp-essential-255-g8-amd-3020e-8gb-256gb-ssd-156.jpg'
+      image: 'https://thumb.pccomponentes.com/w-530-530/articles/1081/10818641/1238-acer-aspire-3-a315-59-intel-core-i5-1235u-8gb-512gb-ssd-156.jpg'
     },
     {
         name: 'Alurin Go Start Intel Celeron N4020/8GB/256GB SSD/14',
@@ -68,18 +68,46 @@ const products = [
 
   // Creacion del encabezado 
 
+const header = document.createElement("header") 
+
 const h1 = document.createElement("h1")
 
-h1.innerText = "Digital box"
+h1.innerText = "Digital Components"
 
-document.body.appendChild(h1)
+header.appendChild(h1)
+
+document.body.appendChild(header)
 
 
+// Creacion del Main 
+
+
+const main = document.createElement("main")
+
+document.body.appendChild(main)
 
 // Section contenido Filtrador
 
+
 const sectionFilter = document.createElement("section")
 
+sectionFilter.className = "filter";
+
+const sectionInput = document.createElement("input")
+
+sectionInput.type = "text";
+
+const sectionButton = document.createElement("button")
+
+sectionButton.textContent = "search"
+
+sectionButton.className = "";
+
+sectionFilter.appendChild(sectionInput)
+
+sectionFilter.appendChild(sectionButton)
+
+main.appendChild(sectionFilter)
 
 
 
@@ -104,7 +132,7 @@ products.forEach(item => {
 
     name.innerText = item.name;
 
-    price.textContent = "Precio: " + item.price;
+    price.textContent = "Precio: " + item.price + " €";
 
     seller.innerText = item.seller;
 
@@ -124,5 +152,15 @@ products.forEach(item => {
 
 });
 
+main.appendChild(sectionProduct)
 
-document.body.appendChild(sectionProduct)
+
+// Creacion del Footer 
+
+const footer = document.createElement("footer")
+
+const date = new Date().getFullYear();
+
+footer.innerHTML = "Todos los derechos Reservados a Digital Components " + date;
+
+document.body.appendChild(footer)
