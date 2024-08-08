@@ -22,7 +22,6 @@
 
 body {
   display: flex;
-
   flex-direction: column;
   background: rgb(2, 0, 36);
   background: var(--background-color);
@@ -190,7 +189,6 @@ div:hover {
 
 footer {
   display: flex;
-
   width: 100%;
   color: var(--text-color);
   font-size: 20px;
