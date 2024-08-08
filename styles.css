@@ -25,6 +25,7 @@ body {
   flex-direction: column;
   background: rgb(2, 0, 36);
   background: var(--background-color);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /************************************  Header ************************************************/
@@ -163,6 +164,7 @@ div:hover {
 
   .filter > input {
     width: 200px;
+    height: 30px;
   }
 
   .filter > button {
